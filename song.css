@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+*::after, *::before{
+    box-sizing: border-box;
+}
+
+@keyframes circle{
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+.page{
+    display:flex;
+    flex-direction: column;
+    height:100vh;
+    background:transparent url(./img/blur.jpg) no-repeat center;
+    background-size:cover;
+}
+.disc-container{
+    position: relative;
+}
+.disc-container .disc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:15vw;
+}
+.disc-container .pointer {
+    width: 25vw;
+    position: absolute;
+    left:50%;
+}
+.disc-container .circle{
+    width:73vw;
+}
+.disc-container .light{
+    width:73vw;
+    position: absolute;
+    animation: circle 20s infinite linear;
+}
+.disc-container .cover{
+    width:46vw;
+    position: absolute;
+    border-radius:50%;
+    animation: circle 20s infinite linear;
+}
